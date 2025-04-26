@@ -14,6 +14,9 @@
 
 This is a plugin for sorting color tags in [Zotero](https://www.zotero.org/).
 
+![screenshot](https://github.com/user-attachments/assets/935cbdf1-a0d5-43c9-a435-03f49e7d0a97)
+
+
 ## 💻 Development
 
 This repo is created from the [Zotero plugin template](https://github.com/windingwind/zotero-plugin-template), please follow the [quick start guide](https://github.com/windingwind/zotero-plugin-template?tab=readme-ov-file#quick-start-guide).
