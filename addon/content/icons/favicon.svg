@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666667 8.4666667"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.1 (93de688d07, 2025-03-30)"
+   sodipodi:docname="favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="18.25"
+     inkscape:cx="16.027397"
+     inkscape:cy="15.506849"
+     inkscape:window-width="1536"
+     inkscape:window-height="827"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#22c55e;stop-opacity:1"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#0ea5e9;stop-opacity:1"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="102.65834"
+       y1="146.31459"
+       x2="106.73292"
+       y2="153.72292"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-102.12917,-145.78542)">
+    <!-- Icon from Material Design Icons by Pictogrammers - https://github.com/Templarian/MaterialDesign/blob/master/LICENSE -->
+    <path
+       fill="currentColor"
+       d="m 109.84813,149.86318 -3.33376,-3.33375 c -0.13342,-0.13343 -0.31855,-0.21484 -0.52228,-0.21484 h -2.59293 a 0.74083381,0.74083381 0 0 0 -0.74082,0.74082 v 2.59293 c 0,0.20373 0.0814,0.38893 0.21854,0.52599 l 3.33375,3.33375 c 0.13329,0.13327 0.31856,0.21484 0.52229,0.21484 0.20372,0 0.38895,-0.0815 0.5223,-0.21854 l 2.59291,-2.59291 c 0.13706,-0.13342 0.21854,-0.31858 0.21854,-0.5223 0,-0.20373 -0.0852,-0.39264 -0.21854,-0.52599 m -5.89333,-1.69651 a 0.55562536,0.55562536 0 0 1 -0.55564,-0.55562 0.55562536,0.55562536 0 0 1 0.55564,-0.55564 0.55562536,0.55562536 0 0 1 0.55562,0.55564 0.55562536,0.55562536 0 0 1 -0.55562,0.55562 m 4.3598,3.06335 -1.58168,1.58168 -1.58169,-1.58168 a 0.9334506,0.9334506 0 0 1 -0.27039,-0.65565 0.92604225,0.92604225 0 0 1 0.92604,-0.92603 c 0.25559,0 0.48895,0.10375 0.65564,0.2741 l 0.2704,0.26671 0.2704,-0.27041 c 0.16669,-0.16668 0.40005,-0.2704 0.65565,-0.2704 a 0.92604225,0.92604225 0 0 1 0.92604,0.92603 c 0,0.2556 -0.10375,0.48895 -0.27041,0.65565"
+       id="path1"
+       style="stroke-width:0.370417;fill-opacity:1;fill:url(#linearGradient2)" />
+  </g>
+</svg>
