@@ -34,27 +34,27 @@ export class TagColumn {
         for (const { tag: tagName } of item.getTags()) {
           const tag = tagColors.get(tagName);
           if (tag === undefined) continue;
-          // @ts-ignore
+          // @ts-ignore Wrong Zotero typing
           weight += Math.pow(2, 7 - tag.position);
         }
         const dataString = weight.toString(2).padStart(8, "0");
         const colors = item
-          .getTags() // @ts-ignore
+          .getTags() // @ts-ignore Wrong Zotero typing
           .map(({ tag: tagName }) => tagColors.get(tagName)?.color)
           .filter((x) => !!x);
-        return dataString + "|" + JSON.stringify(colors)
+        return dataString + "|" + JSON.stringify(colors);
       },
       renderCell(index, data, column, isFirstColumn, doc) {
         if (!sortedOnFirstRender) {
           sortedOnFirstRender = true;
-          // @ts-ignore
+          // @ts-ignore Wrong Zotero typing
           Zotero.getActiveZoteroPane().itemsView.sort();
         }
         const colors = JSON.parse(data.slice(9)) as string[];
         const div = doc.createElement("span");
         for (const color of colors) {
           const span = doc.createElement("span");
-          span.className = "colored tag-swatch"
+          span.className = "colored tag-swatch";
           span.style.color = color;
           div.appendChild(span);
         }
