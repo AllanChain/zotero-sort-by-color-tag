@@ -30,7 +30,7 @@ export function registerExtraColumn() {
       }
       // Zotero forces the secondary column the same direction of the primary sort
       // We have to change the order of the tags in order to control secondary sorts
-      if (getPref("secondary-ascending")) weight = 1 << (8 - weight);
+      if (getPref("secondary-ascending")) weight = (1 << 8) - weight;
       const dataString = weight.toString(2).padStart(8, "0");
       const colors = item
         .getTags() // @ts-ignore Wrong Zotero typing
