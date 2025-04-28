@@ -18,6 +18,7 @@ export function registerExtraColumn() {
     label: getString("tag-column"),
     minWidth: 30,
     zoteroPersist: ["width", "hidden", "sortDirection"],
+    flex: 0.2,
     dataProvider: (item: Zotero.Item, dataKey: string) => {
       const tagColors = Zotero.Tags.getColors(item.libraryID);
       let weight = 0;
@@ -27,6 +28,9 @@ export function registerExtraColumn() {
         // @ts-ignore Wrong Zotero typing
         weight += Math.pow(2, 7 - tag.position);
       }
+      // Zotero forces the secondary column the same direction of the primary sort
+      // We have to change the order of the tags in order to control secondary sorts
+      if (getPref("secondary-ascending")) weight = 1 << (8 - weight);
       const dataString = weight.toString(2).padStart(8, "0");
       const colors = item
         .getTags() // @ts-ignore Wrong Zotero typing
@@ -36,7 +40,7 @@ export function registerExtraColumn() {
     },
     renderCell(index, data, column, isFirstColumn, doc) {
       maySortActivaPane();
-      const colors = JSON.parse(data.slice(9)) as string[];
+      const colors = JSON.parse(data.slice(data.indexOf("|") + 1)) as string[];
       const div = doc.createElement("span");
       for (const color of colors) {
         const span = doc.createElement("span");
