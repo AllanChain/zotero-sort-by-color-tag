@@ -1,6 +1,8 @@
 import { getLocaleID, getString } from "./utils/locale";
 import { getPref } from "./utils/prefs";
 
+type Colors = Map<string, { color: string; position: number }>;
+
 let sortedOnFirstRender = false;
 
 function maySortActivaPane() {
@@ -20,7 +22,8 @@ export function registerExtraColumn() {
     zoteroPersist: ["width", "hidden", "sortDirection"],
     flex: 0.2,
     dataProvider: (item: Zotero.Item, dataKey: string) => {
-      const tagColors = Zotero.Tags.getColors(item.libraryID);
+      // @ts-ignore Wrong Zotero typing
+      const tagColors = Zotero.Tags.getColors(item.libraryID) as Colors;
       let weight = 0;
       for (const { tag: tagName } of item.getTags()) {
         const tag = tagColors.get(tagName);
@@ -33,9 +36,11 @@ export function registerExtraColumn() {
       if (getPref("secondary-ascending")) weight = (1 << 8) - weight;
       const dataString = weight.toString(2).padStart(8, "0");
       const colors = item
-        .getTags() // @ts-ignore Wrong Zotero typing
-        .map(({ tag: tagName }) => tagColors.get(tagName)?.color)
-        .filter((x) => !!x);
+        .getTags()
+        .map(({ tag: tagName }) => tagColors.get(tagName))
+        .filter((x) => x !== undefined)
+        .sort((tag1, tag2) => tag1.position - tag2.position)
+        .map((tag) => tag.color);
       return dataString + "|" + JSON.stringify(colors);
     },
     renderCell(index, data, column, isFirstColumn, doc) {
