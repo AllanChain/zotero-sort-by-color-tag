@@ -1,7 +1,7 @@
-import { TagColumn } from "./modules/columns";
+import { registerExtraColumn } from "./columns";
+import { config } from "../package.json";
 import { getString, initLocale } from "./utils/locale";
 import { createZToolkit } from "./utils/ztoolkit";
-import { Preferences } from "./modules/preferences";
 
 async function onStartup() {
   await Promise.all([
@@ -10,8 +10,13 @@ async function onStartup() {
     Zotero.uiReadyPromise,
   ]);
   initLocale();
-  Preferences.registerPreferences();
-  TagColumn.registerExtraColumn();
+  Zotero.PreferencePanes.register({
+    pluginID: config.addonID,
+    src: rootURI + "content/preferences.xhtml",
+    label: getString("prefs-title"),
+    image: `chrome://${config.addonRef}/content/icons/favicon.svg`,
+  });
+  registerExtraColumn();
 }
 
 async function onMainWindowLoad(win: _ZoteroTypes.MainWindow): Promise<void> {
