@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/Using-Zotero%20Plugin%20Template-blue?logo=github" alt="Using Zotero Plugin Template">
   </a>
   <a href="https://github.com/AllanChain/zotero-sort-by-color-tag/releases">
-    <img src="https://img.shields.io/github/downloads/AllanChain/zotero-sort-by-color-tag/zotero-sort-by-color-tag.xpi?logo=zotero&logoColor=%23CC2936" alt="total downloads">
+    <img src="https://img.shields.io/github/downloads/AllanChain/zotero-sort-by-color-tag/color-tag-sort-for-zotero.xpi?logo=zotero&logoColor=%23CC2936" alt="total downloads">
   </a>
 </p>
 
