@@ -31,16 +31,16 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "zotero-plugin-toolkit": "^5.1.2"
+    "zotero-plugin-toolkit": "^5.1.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@types/node": "^25.9.1",
     "eslint": "^9.39.2",
     "husky": "^9.1.7",
-    "prettier": "^3.8.3",
+    "prettier": "^3.9.4",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.60.1",
+    "typescript-eslint": "^8.62.1",
     "zotero-plugin-scaffold": "^0.8.6",
     "zotero-types": "^4.1.1"
   },
